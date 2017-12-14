@@ -25,6 +25,7 @@ return PhpCsFixer\Config::create()
         'braces'                                       => [
             'position_after_functions_and_oop_constructs' => 'same'
         ],
+        'trailing_comma_in_multiline_array'            => false,
         'header_comment' => [
             'header' => $headerComment
         ]
