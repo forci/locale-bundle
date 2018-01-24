@@ -4,7 +4,7 @@
 
     <services>
 
-        <service id="app.listener.locale" class="Forci\Bundle\LocaleBundle\Listener\DisabledLocaleRedirectListener">
+        <service id="app.listener.locale" class="Forci\Bundle\LocaleBundle\Subscriber\DisabledLocaleRedirectSubscriber">
             <tag name="kernel.event_subscriber"/>
             <argument type="service" id="router"/>
             <argument type="service" id="forci_locale.manager.locales"/>

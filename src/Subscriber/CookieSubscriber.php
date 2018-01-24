@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
-class CookieListener implements EventSubscriberInterface {
+class CookieSubscriber implements EventSubscriberInterface {
 
     protected $name;
 

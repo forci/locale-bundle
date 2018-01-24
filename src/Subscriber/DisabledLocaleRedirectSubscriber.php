@@ -20,7 +20,7 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Routing\Router;
 use Forci\Bundle\LocaleBundle\Manager\LocaleManager;
 
-class DisabledLocaleRedirectListener implements EventSubscriberInterface {
+class DisabledLocaleRedirectSubscriber implements EventSubscriberInterface {
 
     /**
      * @var Router

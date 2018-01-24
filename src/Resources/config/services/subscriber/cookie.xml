@@ -4,7 +4,7 @@
 
     <services>
 
-        <service id="forci_locale.subscriber.locale" class="Forci\Bundle\LocaleBundle\Listener\CookieListener">
+        <service id="forci_locale.subscriber.locale" class="Forci\Bundle\LocaleBundle\Subscriber\CookieSubscriber">
             <tag name="kernel.event_subscriber"/>
             <argument>%forci_locale.cookie_listener%</argument>
         </service>

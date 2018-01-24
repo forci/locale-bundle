@@ -42,12 +42,12 @@ class ForciLocaleExtension extends Extension {
 
         if (isset($config['cookie_listener']) && $config['cookie_listener']['enabled']) {
             $bag->set('forci_locale.cookie_listener', $config['cookie_listener']);
-            $loader->load('services/listener/cookie.xml');
+            $loader->load('services/subscriber/cookie.xml');
         }
 
         if (isset($config['disabled_locale_redirect_listener']) && $config['disabled_locale_redirect_listener']['enabled']) {
             $bag->set('forci_locale.disabled_locale_redirect_listener', $config['disabled_locale_redirect_listener']);
-            $loader->load('services/listener/disabled_locale_redirect.xml');
+            $loader->load('services/subscriber/disabled_locale_redirect.xml');
         }
 
         $bag->set('forci_locale.locales_enabled.routing', implode('|', $localesSimple));
