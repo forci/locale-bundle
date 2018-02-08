@@ -1,6 +1,6 @@
 <?php
 
-/*
+/*g
  * This file is part of the ForciLocaleBundle package.
  *
  * (c) Martin Kirilov <wucdbm@gmail.com>
@@ -35,7 +35,7 @@ class LocaleChoiceType extends AbstractType {
         /** @var Locale $locale */
         foreach ($locales as $locale) {
             if ($locale->getIsEnabled()) {
-                $choices[$locale->getLocale()] = $locale->getName();
+                $choices[$locale->getName()] = $locale->getLocale();
             }
         }
         $resolver->setDefaults([
