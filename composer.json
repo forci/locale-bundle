@@ -19,7 +19,7 @@
         "wucdbm/php-cs-fixers": "~0.1"
     },
     "autoload": {
-        "psr-4": { "Forci\\Bundle\\LocaleBundle\\": "src" }
+        "psr-4": { "Forci\\Bundle\\Locale\\": "src" }
     },
     "config": {
         "bin-dir": "bin"

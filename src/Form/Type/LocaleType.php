@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Forci\Bundle\LocaleBundle\Form\Type;
+namespace Forci\Bundle\Locale\Form\Type;
 
-use Forci\Bundle\LocaleBundle\Locale\Locale;
+use Forci\Bundle\Locale\Locale\Locale;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;

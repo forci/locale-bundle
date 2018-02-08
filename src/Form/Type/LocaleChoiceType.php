@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Forci\Bundle\LocaleBundle\Form\Type;
+namespace Forci\Bundle\Locale\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Forci\Bundle\LocaleBundle\Locale\Locale;
-use Forci\Bundle\LocaleBundle\Manager\LocaleManager;
+use Forci\Bundle\Locale\Locale\Locale;
+use Forci\Bundle\Locale\Manager\LocaleManager;
 
 class LocaleChoiceType extends AbstractType {
 
