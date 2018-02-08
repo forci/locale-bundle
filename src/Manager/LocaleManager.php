@@ -3,15 +3,17 @@
 /*
  * This file is part of the ForciLocaleBundle package.
  *
- * (c) Martin Kirilov <wucdbm@gmail.com>
+ * Copyright (c) Forci Web Consulting Ltd.
+ *
+ * Author Martin Kirilov <martin@forci.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Forci\Bundle\LocaleBundle\Manager;
+namespace Forci\Bundle\Locale\Manager;
 
-use Forci\Bundle\LocaleBundle\Locale\Locale;
+use Forci\Bundle\Locale\Locale\Locale;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class LocaleManager {

@@ -3,13 +3,15 @@
 /*
  * This file is part of the ForciLocaleBundle package.
  *
- * (c) Martin Kirilov <wucdbm@gmail.com>
+ * Copyright (c) Forci Web Consulting Ltd.
+ *
+ * Author Martin Kirilov <martin@forci.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Forci\Bundle\LocaleBundle\Subscriber;
+namespace Forci\Bundle\Locale\Subscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -18,7 +20,7 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Routing\Router;
-use Forci\Bundle\LocaleBundle\Manager\LocaleManager;
+use Forci\Bundle\Locale\Manager\LocaleManager;
 
 class DisabledLocaleRedirectSubscriber implements EventSubscriberInterface {
 

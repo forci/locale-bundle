@@ -2,7 +2,7 @@
 
 An opinionated Symfony ~3.0|4.0 Bundle with several helpers for locale management.
 
-Add this bundle to your AppKernel.php `new \Forci\Bundle\LocaleBundle\ForciLocaleBundle()`
+Add this bundle to your AppKernel.php `new \Forci\Bundle\Locale\ForciLocaleBundle()`
 
 `wucdbm_locale.locales_simple` is a simple array of the locale keys
 

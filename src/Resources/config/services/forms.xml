@@ -4,7 +4,7 @@
 
     <services>
 
-        <service id="app.form.type.forci_locale_choice" class="Forci\Bundle\LocaleBundle\Form\Type\LocaleChoiceType">
+        <service id="app.form.type.forci_locale_choice" class="Forci\Bundle\Locale\Form\Type\LocaleChoiceType">
             <argument type="service" id="forci_locale.manager.locales"/>
             <tag name="form.type" alias="forci_locale_choice"/>
         </service>

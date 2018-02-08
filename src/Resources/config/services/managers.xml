@@ -4,7 +4,7 @@
 
     <services>
 
-        <service id="forci_locale.manager.locales" class="Forci\Bundle\LocaleBundle\Manager\LocaleManager">
+        <service id="forci_locale.manager.locales" class="Forci\Bundle\Locale\Manager\LocaleManager">
             <argument type="service" id="request_stack"/>
             <argument>%forci_locale.config%</argument>
             <argument>%kernel.default_locale%</argument>
