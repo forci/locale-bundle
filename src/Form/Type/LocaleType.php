@@ -70,7 +70,7 @@ class LocaleType extends AbstractType {
         return 'forci_locale';
     }
 
-    public function setDefaultOptions(OptionsResolver $resolver) {
+    public function configureOptions(OptionsResolver $resolver) {
         $resolver->setDefaults([
             'data_class' => Locale::class,
         ]);
