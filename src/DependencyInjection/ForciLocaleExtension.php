@@ -44,7 +44,7 @@ class ForciLocaleExtension extends Extension {
 
         $bag->set('forci_locale.cookie', $config['cookie']);
         
-        if ($config['cookie_listener']['enabled']) {
+        if (isset($config['cookie_listener']) && $config['cookie_listener']['enabled']) {
             $loader->load('services/subscriber/cookie.xml');
         }
 
