@@ -44,7 +44,7 @@ class LocaleManager {
         $request = $this->requestStack->getCurrentRequest();
 
         if ($request) {
-            return $request->attributes->get('_locale');
+            return $request->attributes->get('_locale', $this->getDefaultLocale());
         }
 
         return $this->getDefaultLocale();
