@@ -20,16 +20,23 @@ use Symfony\Component\HttpKernel\KernelEvents;
 
 class CookieSubscriber implements EventSubscriberInterface {
 
+    /** @var string */
     protected $name;
 
+    /** @var int */
     protected $duration;
 
+    /** @var string */
     protected $path;
+
+    /** @var string|null */
+    protected $host;
 
     public function __construct($config) {
         $this->name = $config['name'];
         $this->duration = $config['duration'];
         $this->path = $config['path'];
+        $this->host = $config['host'];
     }
 
     public static function getSubscribedEvents() {
@@ -55,6 +62,14 @@ class CookieSubscriber implements EventSubscriberInterface {
         }
 
         $response = $event->getResponse();
-        $response->headers->setCookie(new Cookie($this->name, $currentLocale, time() + $this->duration, $this->path));
+
+        /** @var Cookie $cookie */
+        foreach ($response->headers->getCookies() as $cookie) {
+            if ($this->name === $cookie->getName()) {
+                return;
+            }
+        }
+
+        $response->headers->setCookie(new Cookie($this->name, $currentLocale, time() + $this->duration, $this->path, $this->host));
     }
 }
