@@ -35,8 +35,8 @@ class LocaleManager {
             $this->locales[$locale] = new Locale($locale, $data['name'], $data['enabled'], $data['currency']);
         }
         $this->defaultLocale = $defaultLocale;
-        if (isset($config['cookie_listener']) && $config['cookie_listener']['enabled']) {
-            $this->cookieName = $config['cookie_listener']['name'];
+        if ($config['cookie']['enabled']) {
+            $this->cookieName = $config['cookie']['name'];
         }
     }
 
