@@ -88,8 +88,14 @@ class DisabledLocaleRedirectSubscriber implements EventSubscriberInterface {
             return;
         }
 
+        $toLocale = $this->manager->getDefaultLocale();
+
+        if ($this->usePreferredLocale && $this->manager->getPreferredLocale() != $locale) {
+            $toLocale = $this->manager->getPreferredLocale();
+        }
+
         $params = array_replace_recursive($request->attributes->get('_route_params', []), [
-            '_locale' => $this->usePreferredLocale ? $this->manager->getPreferredLocale() : $this->manager->getDefaultLocale(),
+            '_locale' => $toLocale,
         ]);
 
         // generate a url for the same route with the same params, but with the default locale
@@ -105,4 +111,5 @@ class DisabledLocaleRedirectSubscriber implements EventSubscriberInterface {
 
         $event->setResponse($response);
     }
+
 }
