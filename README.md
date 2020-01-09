@@ -1,4 +1,4 @@
-# Login Bundle
+# Locale Bundle
 
 An opinionated Symfony ~3.0|4.0 Bundle with several helpers for locale management.
 
