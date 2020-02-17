@@ -15,7 +15,7 @@ namespace Forci\Bundle\Locale\Subscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\Cookie;
-use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+use Symfony\Component\HttpKernel\Event\ResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 class CookieSubscriber implements EventSubscriberInterface {
@@ -48,7 +48,7 @@ class CookieSubscriber implements EventSubscriberInterface {
         ];
     }
 
-    public function setLocale(FilterResponseEvent $event) {
+    public function setLocale(ResponseEvent $event) {
         $request = $event->getRequest();
         $localeCookie = $request->cookies->get($this->name);
         $currentLocale = $request->getLocale();

@@ -16,7 +16,7 @@ namespace Forci\Bundle\Locale\Subscriber;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Routing\Router;
@@ -59,10 +59,7 @@ class DisabledLocaleRedirectSubscriber implements EventSubscriberInterface {
         ];
     }
 
-    /**
-     * @param GetResponseEvent $event
-     */
-    public function onKernelRequest(GetResponseEvent $event) {
+    public function onKernelRequest(RequestEvent $event) {
         // don't redirect in dev
         if ($this->isDebug) {
             return;
